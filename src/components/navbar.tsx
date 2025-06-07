@@ -20,7 +20,7 @@ const Navbar = () => {
             />
         </Link>
         
-        <Suspense fallback={<Loading/>}>
+        <Suspense fallback={<div>Loading....</div>}>
           <SearchInput/>
         </Suspense>
         

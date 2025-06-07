@@ -84,8 +84,6 @@ const ClientPokemon = ({ name }: { name: string }) => {
           <h1 className="text-[2rem] font-bold">{pokemon.name}</h1>
 
           {/**CP & HP */}
-  
-
           <ProgressCP data={{ maxCP: pokemon.maxCP }} />
           <ProgressHP data={{ maxHP: pokemon.maxHP }} />
           
