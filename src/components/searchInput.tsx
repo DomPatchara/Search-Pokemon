@@ -15,8 +15,8 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center">
-      <form className="max-w-sm border border-black/50  py-1 px-2 rounded-2xl flex items-center justify-between">
+    <div className="w-full flex items-center justify-center ml-10 md:ml-0">
+      <form className="max-w-sm border border-black/50  md:py-1 md:px-2 rounded-2xl flex items-center justify-between">
         <input
           required
           type="text"
@@ -24,9 +24,9 @@ const SearchInput = () => {
           onChange={handleSearch}
           placeholder="Search Pokemon..."
         />
-        <button className="rounded-full p-1">
+        <div className="rounded-full p-1">
           <IoIosSearch size={25}  />
-        </button>
+        </div>
       </form>
     </div>
   );

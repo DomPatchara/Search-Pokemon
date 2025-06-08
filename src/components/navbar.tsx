@@ -10,7 +10,7 @@ import { Suspense } from 'react';
 const Navbar = () => {
   return (
     <div className='sticky top-0 w-screen z-50 h-25 bg-[#D9EAFD]/80 backdrop-blur-md flex items-center px-8 sm:px-[7%]'>
-        <Link href="/" className='absolute aspect-square w-18'>
+        <Link href="/" className='absolute aspect-square w-14 md:w-18'>
             <Image 
                 src={logo}
                 fill
