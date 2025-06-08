@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { types } from "../../../../assets/assets.js";
 import Loading from "../loading";
 import Upgrade from "@/components/upgrade";
-import NotFound from "../not-found";
+import NotFound from "../../not-found"
 import clsx from "clsx";
 
 import ProgressCP from "@/components/cp";
@@ -17,11 +17,13 @@ import Attack from "./components/attacks";
 import Evolutions from "./components/evolutions";
 import { Suspense } from "react";
 
-const ClientPokemon = ({ name }: { name: string }) => {
+
+const ClientPokemon =  ({ name }: { name: string }) => {
+
   const searchParams = useSearchParams();
   const evoName = searchParams.get("evo"); // get evolution name --> ?evo="xxx"
-
-  // Query Pokemon Data + ( EvoData )
+  
+  // Query Pokemon Data หรือ EvoData 
   const { data, loading, error } = useQuery<GetPokemonData, VarPokemonName>(
     GET_POKEMON_NAME,
     {
@@ -37,6 +39,7 @@ const ClientPokemon = ({ name }: { name: string }) => {
   }
   if (error) return <p>Error Fetching Data</p>;
   if (!data?.pokemon) return <NotFound />;
+  
 
   // Destructuring data
   console.log("pokemon:", data);

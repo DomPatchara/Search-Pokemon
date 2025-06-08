@@ -10,7 +10,7 @@ const Loading = () => {
         height={40}
         width={40}
         alt="pokeball"
-        className="animate-spin duration-1000 ease-linear"
+        className="animate-spin  [animation-duration:0.8s] "
       />
       <span className="ml-2 text-xl text-gray-500">Loading Data...</span>
     </div>

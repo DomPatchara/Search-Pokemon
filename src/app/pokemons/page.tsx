@@ -68,7 +68,7 @@ const HomePage = () => {
             <div className="flex justify-center mt-5">
               <button
                 onClick={handleLoadMore}
-                className="flex items-center group cursor-pointer  gap-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 active:bg-green-800"
+                className="flex items-center group cursor-pointer  gap-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 active:bg-blue-800"
               >
                 <FaArrowCircleDown
                   size={20}
