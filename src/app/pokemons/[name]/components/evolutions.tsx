@@ -3,26 +3,24 @@
 import React from "react";
 import { Evolution } from "../../../../../types";
 import { useParams } from "next/navigation";
-import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 interface EvolutionDataProps {
   data: Evolution[];
 }
 const Evolutions = ({ data }: EvolutionDataProps) => {
-  const searchParams = useSearchParams();
   const router = useRouter();
   const params = useParams();
   console.log("Current params:", params);
 
   const onUpgrade = (name: string) => {
-    const param = new URLSearchParams(searchParams.toString());
+    const param = new URLSearchParams();
 
     if (name) {
       param.set("evo", name);
     }
 
-    router.push(`/pokemons/${params.name}/?${param.toString()}`);
+    router.push(`/pokemons/${params.name}/?${param}`);
   };
 
   return (
